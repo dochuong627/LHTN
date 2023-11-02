@@ -1,0 +1,21 @@
+
+// Slider
+.carousel-indicators {
+  position: relative;
+  li{
+    background-color: $gray-400;
+  }
+  .active{
+    background-color: $blue;
+  }
+}
+
+.carousel-control-prev{
+  width: fit-content;
+  left: -15px;
+}
+
+.carousel-control-next{
+  width: fit-content;
+  right: -15px;
+}

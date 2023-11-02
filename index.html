@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LHTN VN - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/adminLHTN.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-1 my-2 my-md-0 mw-100 logo">
+            <div class="input-group">
+                <div>
+                    <img class="logo-lhtn" src="img/logoLHTN.png" alt="logo"/>
+                </div>
+                <div class="text-uppercase d-flex align-self-center flex-column ml-3 text-white ">
+                    <div class="text20 d-md-none d-xl-block d-sm-none">hệ thống quản lý và điều hành</div>
+                    <div class="text24 d-md-none d-xl-block d-sm-none">HỘI LIÊN HIỆP THANH NIÊN VIỆT NAM</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle p-0" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/imgNgonNgu.png" alt="Ngôn ngữ" />
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languageDropdown">
+                    <h6 class="dropdown-header bg-success">
+                        Ngôn ngữ
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <img src="img/imgNgonNgu.png" alt="Ngôn ngữ" />
+                        </div>
+                        <div>
+                            <span class="font-weight-bold">English</span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/vectorThongBao.svg" alt="Thông báo" />
+                    <!-- Counter - Alerts -->
+                    <span class="badge badge-danger badge-counter rounded-circle">3</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="alertsDropdown">
+                    <h6 class="dropdown-header">
+                        Thông báo
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-file-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 16h00</div>
+                            <span class="font-weight-bold">Một bài viết đã được xuất bản</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                                <i class="fas fa-donate text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 13h00</div>
+                            Bạn vừa đóng hội phí
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                                <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 11h00</div>
+                            Chú ý 0h00 02/11/2023 hệ thống sẽ bảo trì
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Hiển thị tất cả</a>
+                </div>
+            </li>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow d-flex align-items-center">
+                <a class="nav-link dropdown-toggle bg-white h-auto rounded pr-0" href="#" id="userDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-profile rounded-circle mr-2 my-2" src="img/imgNguyenVanA.png" alt="Người dùng">
+                    <div class="ml-1 d-flex align-items-start flex-column">
+                        <span class="mr-1 d-none d-lg-inline text-dark small lh-1 font-weight-bold text-lg">Nguyễn Văn A</span>
+                        <span class="mr-0 d-none d-lg-inline text-dark small lh-1">anguyenvan@gmail.com</span>
+                    </div>
+                    <img class="d-md-none d-sm-none d-lg-block mx-2" src="img/vectorExpand.svg" alt="Expand">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Đăng xuất
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-white sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#">
+                    <img src="img/icon-BieuDoThongKe.png" alt="Biểu Đồ Thống Kê" />
+                    <span class="collapsing m-0 text-black">Biểu đồ thống kê</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-ChamDiemBoTieuChi.png" alt="Chấm điểm bộ tiêu chí" />
+                    <span class="collapsing m-0">Chấm điểm bộ tiêu chí</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyBoTieuChi.png" alt="Quản lý bộ tiêu chí" />
+                    <span class="collapsing m-0">Quản lý bộ tiêu chí</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyDaiHoi.png" alt="Quản lý đại hội" />
+                    <span class="collapsing m-0">Quản lý đại hội</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyVanBan.png" alt="Quản lý văn bản" />
+                    <span class="collapsing m-0">Quản lý văn bản</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyBaiViet.png" alt="Quản lý bài viết" />
+                    <span class="collapsing m-0">Quản lý bài viết</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-BaoCao.png" alt="Báo cáo" />
+                    <span class="collapsing m-0">Báo cáo</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyTaiKhoan.png" alt="Quản lý tài khoản" />
+                    <span class="collapsing m-0">Quản lý tài khoản</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyPhanQuyen.png" alt="Quản lý phân quyền" />
+                    <span class="collapsing m-0">Quản lý phân quyền</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-LichSuHeThong.png" alt="Lịch sử hệ thống" />
+                    <span class="collapsing m-0">Lịch sử hệ thống</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-TaiLieuHuongDan.png" alt="Tài liệu hướng dẫn" />
+                    <span class="collapsing m-0">Tài liệu hướng dẫn</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-CaiDat.png" alt="Cài đặt" />
+                    <span class="collapsing m-0">Cài đặt</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="align-items-start flex-column ml-3 minimal">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <span class="detail">Thu gọn</span>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Slider -->
+                    <div class="row m-0">
+                        <div class="card shadow mb-4 position-relative w-100 m-0 p-3 pt-4">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                                <div class="carousel-inner m-0">
+                                    <div class="carousel-item active">
+                                        <div class="row m-0">
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row m-0">
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row m-0">
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row m-0">
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
+                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleFade" data-slide-to="3"></li>
+                                </ol>
+                                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                    <img src="img/vectorBtnPrev.svg" alt="Prev" />
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                    <img src="img/vectorBtnNext.svg" alt="Next" />
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- End Slider -->
+
+                    
+                    <div class="row text-uppercase text20 text-dark mb-4 mx-0">Hệ thống chấm tiêu chí của hội</div>
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!--Thành viên hội-->
+                        <div class="col-12">
+                            <div class="card shadow ">
+                                <div class="card-body row">
+                                    <div class="col-12 text-uppercase text16 d-flex align-items-center">
+                                        <img src="img/vectorThanhVienHoi.svg" alt="Thành Viên Hội" />
+                                        Thành viên hội
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card shadow h-100 py-2 bg-user-image-admin borderRadius1">
+                                            <div class="card-body d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="text-right text47 text-white">1</div>
+                                                    <div class="text-right text23 text-white text-capitalize">admin</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card shadow h-100 py-2 bg-user-image-banbithu borderRadius1">
+                                            <div class="card-body d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="text-right text47 text-white">3</div>
+                                                    <div class="text-right text23 text-white text-capitalize">Ban bí thư</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card shadow h-100 py-2 bg-user-image-trunguong borderRadius1">
+                                            <div class="card-body d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="text-right text47 text-white">96</div>
+                                                    <div class="text-right text23 text-white text-capitalize">Trung ương</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card shadow h-100 py-2 bg-user-image-tinhthanhdoan borderRadius1">
+                                            <div class="card-body d-flex justify-content-end">
+                                                <div class="">
+                                                    <div class="text-right text47 text-white">349</div>
+                                                    <div class="text-right text23 text-white text-capitalize">tỉnh, thành đoàn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END Thành viên hội-->
+                        
+                        
+                        <!--Tiến độ nộp minh chứng của tỉnh-->
+                        <div class="col-12">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body row">
+                                    <div class="col-12 text-uppercase text16 d-flex align-items-center">
+                                        <img src="img/vectorTienDoNopMinhChungTinh.svg" alt="Tiến độ nộp minh chứng của tỉnh" />
+                                        Tiến độ nộp minh chứng của tỉnh
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-4 border-0 bg-white">
+                                <div class="card-body row w-100">
+                                    <div class="col-xl-10 col-sm-8">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-12">
+                                                <select class="form-select w-100 dropdownlist font-weight-bold" aria-label="Chọn bộ tiêu chí">
+                                                    <option selected disabled>Chọn bộ tiêu chí</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-6 col-md-12">
+                                                <select class="form-select w-100 dropdownlist font-weight-bold" aria-label="Chọn bộ đơn vị">
+                                                    <option selected disabled>Chọn bộ đơn vị</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-2 col-sm-4 d-flex align-items-center">
+                                        <a href="#" class="btn bg-primary text-white w-100 btn-block">Lọc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Chart -->
+                        <div class="col-xl-7 col-md-12">
+                            <div class="card mb-4 border-0">
+                                <div class="card-body row">
+                                    <div class="col-xl-6 col-md-6 col-sm-12">
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <div class="text-center text20 mb-4">Hoàn thành</div>
+                                                <div class="row m-0">
+                                                    <canvas id="HoanThanh"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 col-sm-12">
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <div class="text-center text20 mb-4">Chưa hoàn thành</div>
+                                                <div class="row m-0">
+                                                    <canvas id="ChuaHoanThanh"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chart -->
+                        <div class="col-xl-5 col-lg-12">
+                            <div class="card mb-4 border-0">
+                                <!-- Card Body -->
+                                <div class="card-body row">
+                                    <div class="card w-100 border-0">
+                                        <div class="card-body">
+                                            <div class="text-center text20 mb-4">Tổng tiến độ minh chứng của các tỉnh</div>
+                                            <div class="row m-0">
+                                                <div class="col-4">
+                                                    <canvas id="TongTienDoMinhChungCacTinh"></canvas>
+                                                </div>
+                                                <div class="col-8 d-flex align-items-center">
+                                                    <div class="w-100">
+                                                        <div>
+                                                            <div class="row">
+                                                                <div class="col-7">Các tỉnh đã hoàn thành</div>
+                                                                <div class="col-5 text-right colorCacTinhHoanThanh">132,645</div>
+                                                            </div>
+                                                            <div class="progress progress-sm mb-2">
+                                                                <div class="progress-bar progressCacTinhHoanThanh" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="row">
+                                                                <div class="col-7">Các tỉnh chưa hoàn thành</div>
+                                                                <div class="col-5 text-right colorCacTinhChuaHoanThanh">100,429</div>
+                                                            </div>
+                                                            <div class="progress progress-sm mb-2">
+                                                                <div class="progress-bar progressCacTinhChuaHoanThanh" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer text-white d-flex flex-wrap">
+        <img src="img/logoLHTN.png" alt="Logo LHTN VN" class="my-3 ml-3" />
+        <div class="d-flex align-items-center ml-3">
+            <div class="flex-row">
+                <div class="text-uppercase text-lg font-weight-bold">hệ thống quản lý và điều hành HỘI LIÊN HIỆP THANH NIÊN VIỆT NAM</div>
+                <div class="my-2">
+                    <img src="img/vectorLocation.svg" alt="Vị trí" />
+                    <span>Địa chỉ: 64 Bà Triệu, Hoàn Kiếm, Hà Nội</span>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="mr-2">
+                        <img src="img/vectorWebsite.svg" alt="Vị trí" />
+                        <span>Website: www.thanhgiong.vn</span>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/vectorEmail.svg" alt="Vị trí" />
+                        <span>Email: twhoilhtnvn@gmail.com</span>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/vectorPhone.svg" alt="Vị trí" />
+                        <span>Điện thoại: 0982 869 586</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Có phải bạn muốn đăng xuất?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Chọn nút "Đăng xuất" phía dưới, nếu bạn muốn kết thúc phiên làm việc.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/adminLHTN.min.js"></script>
+    
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/chart/chart-pie.js"></script>
+</body>
+
+</html>

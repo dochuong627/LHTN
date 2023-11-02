@@ -1,0 +1,73 @@
+// Pulling these images from Unsplash
+
+.bg-login-image {
+  background: url($login-image);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image {
+  background: url($register-image);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bg-password-image {
+  background: url($password-image);
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+
+  .custom-checkbox.small {
+    label {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form-control-user {
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-user {
+    font-size: 16px;
+    border-radius: 0.3rem;
+    padding: 0.75rem 1rem;
+  }
+
+}
+
+.btn-google {
+  @include button-variant($brand-google, $white);
+}
+
+.btn-facebook {
+  @include button-variant($brand-facebook, $white);
+}
+
+.link-lhtn {
+  color: $linkColor;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.text-login {
+  color: $linkColor;
+  font-size: 14px;
+}
+
+.text-login-lhtn {
+  color: black;
+  font-weight: 500;
+  font-size: 18px
+}
+
+.text-forgotpassword {
+  color: $red;
+  font-weight: 400;
+  font-size: 16px;
+}
