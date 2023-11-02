@@ -16,8 +16,9 @@
 
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="css/adminLHTN.min.css" rel="stylesheet">
     <link href="vendor/datetimepicker/file.css" rel="stylesheet">
+    <link href="vendor/Drag-n-Drop-File-Upload-main/css/style.css" rel="stylesheet">
+    <link href="css/adminLHTN.min.css" rel="stylesheet">
 
 </head>
 
@@ -264,15 +265,16 @@
                             <div class="container-fluid drivers-main tab-pane" id="ListDaiHoi" role="tabpanel">
                                 <div class="card-body m-0 p-0">
                                     <form class="ThemDaiHoi mt-5">
-                                        <div class="row form-group m-0 p-0 ">
-                                            <div class="col-3 font-weight-bold">Tên Đại Hội:</div>
+                                        <div class="row m-0 text-center text-uppercase font-weight-bold text24 d-flex justify-content-center">khởi tạo đại hội</div>
+                                        <div class="row form-group m-0 p-0 mt-5">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Tên Đại Hội:</div>
                                             <div class="col-9">
                                                 <input type="text" class="form-control form-control-user w-100"
                                                 id="TenDaiHoi" aria-describedby="TenDaiHoi"
                                                 placeholder="Nhập thông tin đại hội">
                                             </div>
                                         </div>
-                                        <div class="row form-group m-0 p-0 mt-2">
+                                        <div class="row form-group m-0 p-0 mt-4 bg-gray-100">
                                             <div class="col-3 font-weight-bold d-flex align-items-center">Hạn đăng ký:</div>
                                             <div class="col-9">
                                                 <div class="row">
@@ -322,6 +324,131 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-4">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Hạn tổ chức:</div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_3">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Tỉnh</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-htctinh">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_4">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Huyện</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-htchuyen">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_5">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Cơ sở</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-htccoso">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-4 bg-gray-100">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Nhiệm kỳ:</div>
+                                            <div class="col-9">
+                                                <input type="text" class="form-control form-control-user w-100"
+                                                id="NhiemKy" aria-describedby="Nhiệm kỳ"
+                                                placeholder="Nhập thông tin nhiệm kỳ">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-4">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Văn kiện/Thông báo:</div>
+                                            <div class="col-9">
+                                                <div class="uploadzone p-4 w-100">
+                                                    <div id="drag-warper w-100" style="width:100%">
+                                                        <div class="drag-area d-flex  w-100" id="drag-area">
+                                                            <form action="#" id="drag-form" >
+                                                                <div class="d-flex justify-content-center align-items-center">
+                                                                    <i class="fas fa-cloud-upload-alt" id="drag-cloud"></i>
+                                                                    <p id="drag_text" class="text-dark ml-2">Kéo thả văn kiện, thông báo vào đây<br/><span class="font-italic text14">Tối đa : 20 MB</span></p>
+                                                                    <input class="file-input w-100 h-100" style="z-index: 9999" type="file" id="file-input" name="file" hidden multiple>
+                                                                </div>
+                                                            </form>
+                                                            <div class="ml-auto d-flex align-items-center">
+                                                                <div class="border p-3 border-primary text-primary">Tải lên</div>
+                                                            </div>
+                                                        </div>
+                                                        <section class="progress-area"></section>
+                                                        <section class="uploaded-area"></section>
+                                                    </div>
+                                                </div>
+                                                <div id="snackbar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-4 bg-gray-100">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Mô tả:</div>
+                                            <div class="col-9">
+                                                <input type="text" class="form-control form-control-user w-100"
+                                                id="MoTa" aria-describedby="Mô tả"
+                                                placeholder="Nhập thông tin mô tả ngắn">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-4">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Ảnh đại diện:</div>
+                                            <div class="col-9">
+                                                <div class="uploadzone p-4 w-100">
+                                                    <div id="drag-warper w-100" style="width:100%">
+                                                        <div class="drag-area d-flex  w-100" id="drag-area">
+                                                            <form action="#" id="drag-form1" >
+                                                                <div class="d-flex justify-content-center align-items-center">
+                                                                    <i class="fas fa-cloud-upload-alt" id="drag-cloud"></i>
+                                                                    <p id="drag_text" class="text-dark ml-2">Kéo thả ảnh vào đây<br/><span class="font-italic text14">Tối đa : 20 MB</span></p>
+                                                                    <input class="file-input w-100 h-100" style="z-index: 9999" type="file" id="file-input" name="file" hidden multiple>
+                                                                </div>
+                                                            </form>
+                                                            <div class="ml-auto d-flex align-items-center">
+                                                                <div class="border p-3 border-primary text-primary">Tải ảnh lên</div>
+                                                            </div>
+                                                        </div>
+                                                        <section class="progress-area"></section>
+                                                        <section class="uploaded-area"></section>
+                                                    </div>
+                                                </div>
+                                                <div id="snackbar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 my-4">
+                                            <div class="col-3"></div>
+                                            <div class="col-9">
+                                                <a href="#" class="btn btn-primary btn-icon-split btn-lg">
+                                                    <span class="text">Khởi tạo đại hội</span>
+                                                    <img src="img/vectorSend.svg" alt="send" class="mr-2" />
+                                                </a>
                                             </div>
                                         </div>
                                     </form>
@@ -460,6 +587,7 @@
     <!--Datetime picker-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
     <script src="vendor/datetimepicker/file.js"></script>
+    <script src="vendor/Drag-n-Drop-File-Upload-main/js/upload.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/adminLHTN.min.js"></script>

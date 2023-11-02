@@ -59,20 +59,41 @@
     "showClose": true,
     "showClear": true,
     "showTodayButton": true,
-    "format": "HH:mm - MM/DD/YYYY",
+    "format": "HH:mm - DD/MM/YYYY",
   });
   $('#id_1').datetimepicker({
     "allowInputToggle": true,
     "showClose": true,
     "showClear": true,
     "showTodayButton": true,
-    "format": "HH:mm - MM/DD/YYYY",
+    "format": "HH:mm - DD/MM/YYYY",
   });
   $('#id_2').datetimepicker({
     "allowInputToggle": true,
     "showClose": true,
     "showClear": true,
     "showTodayButton": true,
-    "format": "HH:mm - MM/DD/YYYY",
+    "format": "HH:mm - DD/MM/YYYY",
+  });
+  $('#id_3').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - DD/MM/YYYY",
+  });
+  $('#id_4').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - DD/MM/YYYY",
+  });
+  $('#id_5').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - DD/MM/YYYY",
   });
 })(jQuery); // End of use strict
