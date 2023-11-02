@@ -15,7 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
     <link href="css/adminLHTN.min.css" rel="stylesheet">
+    <link href="vendor/datetimepicker/file.css" rel="stylesheet">
 
 </head>
 
@@ -230,66 +232,156 @@
                 <div class="container-fluid">
 
                     <!-- Breadcrumb -->
-                    <div class="row m-0">
+                    <div class="row d-flex w-100">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb text-capitalize">
                                 <li class="breadcrumb-item"><a href="#" class="text-uppercase">Quản lý đại hội</a></li>
                                 <li class="breadcrumb-item active">Khởi tạo đại hội</li>
                             </ol>
                         </nav>
+                        <div class="ml-auto">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="pill" href="#KhoiTao">
+                                        <div class="btn btn-primary btn-icon-split btn-lg">
+                                            <span class="text"><--</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="pill" href="#ListDaiHoi">
+                                        <div class="btn btn-primary btn-icon-split btn-lg">
+                                            <span class="text">+</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-body row m-0 p-0">
-                            <div class="col-12 row m-0 py-4">
-                                <div class="col-sm-12 col-md-3">
-                                    <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
-                                </div>
-                                <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
-                                    <div class="mb-auto">
-                                        <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
-                                        <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
-                                    </div>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-icon-split btn-lg">
-                                            <span class="text">Chỉnh sửa đại hội</span>
-                                        </a>
-                                    </div>
+                        <div class="tab-content">        
+                            <div class="container-fluid drivers-main tab-pane" id="ListDaiHoi" role="tabpanel">
+                                <div class="card-body m-0 p-0">
+                                    <form class="ThemDaiHoi mt-5">
+                                        <div class="row form-group m-0 p-0 ">
+                                            <div class="col-3 font-weight-bold">Tên Đại Hội:</div>
+                                            <div class="col-9">
+                                                <input type="text" class="form-control form-control-user w-100"
+                                                id="TenDaiHoi" aria-describedby="TenDaiHoi"
+                                                placeholder="Nhập thông tin đại hội">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group m-0 p-0 mt-2">
+                                            <div class="col-3 font-weight-bold d-flex align-items-center">Hạn đăng ký:</div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_0">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Tỉnh</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-hdktinh">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_1">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Huyện</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-hdkhuyen">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-lg-4">
+                                                        <div class="input-group date d-flex flex-column" id="id_2">
+                                                            <div class="d-flex">
+                                                                <div class="text-primary d-flex align-items-center">Cơ sở</div>
+                                                                <div class="input-group-addon input-group-append ml-auto">
+                                                                    <div class="input-group-text-hdkcoso">
+                                                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <input placeholder="Nhập hh:mm - dd/mm/yyyy" type="text" value="" class="form-control" required="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
                                 </div>
                             </div>
-                            <div class="col-12 row bg-gray-100 m-0 py-4">
-                                <div class="col-sm-12 col-md-3">
-                                    <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
-                                </div>
-                                <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
-                                    <div class="mb-auto">
-                                        <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
-                                        <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
+                            <div class="container-fluid drivers-main tab-pane active" id="KhoiTao" role="tabpanel">
+                                <div class="card-body row m-0 p-0">
+                                    <div class="col-12 row m-0 py-4">
+                                        <div class="col-sm-12 col-md-3">
+                                            <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
+                                        </div>
+                                        <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
+                                            <div class="mb-auto">
+                                                <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
+                                                <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary btn-icon-split btn-lg">
+                                                    <span class="text">Chỉnh sửa đại hội</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-icon-split btn-lg">
-                                            <span class="text">Chỉnh sửa đại hội</span>
-                                        </a>
+                                    <div class="col-12 row bg-gray-100 m-0 py-4">
+                                        <div class="col-sm-12 col-md-3">
+                                            <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
+                                        </div>
+                                        <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
+                                            <div class="mb-auto">
+                                                <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
+                                                <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary btn-icon-split btn-lg">
+                                                    <span class="text">Chỉnh sửa đại hội</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-12 row m-0 py-4">
-                                <div class="col-sm-12 col-md-3">
-                                    <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
-                                </div>
-                                <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
-                                    <div class="mb-auto">
-                                        <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
-                                        <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
-                                    </div>
-                                    <div>
-                                        <a href="#" class="btn btn-primary btn-icon-split btn-lg">
-                                            <span class="text">Chỉnh sửa đại hội</span>
-                                        </a>
+                                    <div class="col-12 row m-0 py-4">
+                                        <div class="col-sm-12 col-md-3">
+                                            <img class="w-100" src="img/imgDaiHoi4Cap.png" alt="Dai hoi 4 cap" />
+                                        </div>
+                                        <div class="col-sm-12 col-md-9 d-flex align-items-start flex-column">
+                                            <div class="mb-auto">
+                                                <div class="text24 mb-2">Tổ chức Đại hội đại biểu Hội LHTN Việt Nam 4 cấp</div>
+                                                <div class="text16">Hạn đăng ký: 20h:00 - 06/10/2023</div>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="btn btn-primary btn-icon-split btn-lg">
+                                                    <span class="text">Chỉnh sửa đại hội</span>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
 
                 </div>
@@ -365,8 +457,13 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!--Datetime picker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="vendor/datetimepicker/file.js"></script>
+
     <!-- Custom scripts for all pages-->
     <script src="js/adminLHTN.min.js"></script>
+
     
 </body>
 

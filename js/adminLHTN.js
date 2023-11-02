@@ -52,4 +52,27 @@
     }, 1000, 'easeInOutExpo');
     e.preventDefault();
   });
+
+  //Datetime picker
+  $('#id_0').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - MM/DD/YYYY",
+  });
+  $('#id_1').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - MM/DD/YYYY",
+  });
+  $('#id_2').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "HH:mm - MM/DD/YYYY",
+  });
 })(jQuery); // End of use strict
