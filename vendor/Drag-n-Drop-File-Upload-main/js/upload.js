@@ -32,9 +32,9 @@ function showToast(s,c) {
 
 
 // form click event
-form.addEventListener("click", () =>{
-  fileInput.click();
-});
+// form.addEventListener("click", () =>{
+//   fileInput.click();
+// });
 
 fileInput.onchange = ({target})=>{
   // Check for how much files
