@@ -96,4 +96,13 @@
     "showTodayButton": true,
     "format": "HH:mm - DD/MM/YYYY",
   });
+  $('#id_6').datetimepicker({
+    "allowInputToggle": true,
+    "showClose": true,
+    "showClear": true,
+    "showTodayButton": true,
+    "format": "DD/MM/YYYY",
+  });
+
+
 })(jQuery); // End of use strict
