@@ -16,3 +16,21 @@
     }
 }
 
+.scrollModal{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+ .scrollModal::-webkit-scrollbar {
+     width: 12px;
+     background-color: white;
+ }
+ 
+ .scrollModal::-webkit-scrollbar-track {
+     border-radius: 10px;
+     background-color: white;
+ }
+ 
+ .scrollModal::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $primary;
+ }

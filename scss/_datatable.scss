@@ -54,3 +54,22 @@
         flex-direction: column !important;
     }
 }
+
+#DanhSachBaoCaoVanBanDaiHoi.group {
+    tbody{
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        tr{
+            display: flex;
+            flex: 1;
+            flex-basis: 30%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    thead{
+        display:none;
+    }
+}
