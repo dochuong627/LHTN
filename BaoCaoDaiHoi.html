@@ -15,8 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="vendor/datetimepicker/file.css" rel="stylesheet">
+    <link href="js/datetimepicker/file.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <link href="js/Drag-n-Drop-File-Upload-main/css/style.css" rel="stylesheet">
     <link href="css/adminLHTN.min.css" rel="stylesheet">
 
 </head>
@@ -1488,7 +1489,25 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="uploadzone p-4 w-100 d-flex flex-column">
+                        <div id="drag-warper" class="mb-2 px-4 w-100">
+                            <div class="drag-area d-flex  w-100" id="drag-area">
+                                <form action="#" id="drag-form1" >
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <i class="fas fa-cloud-upload-alt" id="drag-cloud"></i>
+                                        <p id="drag_text" class="text-dark ml-2">Kéo thả văn bản, thông báo vào đây<br/><span class="font-italic text14">Tối đa : 20 MB</span></p>
+                                        <input class="file-input w-100 h-100" style="z-index: 9999" type="file" id="file-input" name="file" hidden multiple>
+                                    </div>
+                                </form>
+                                <div class="ml-auto d-flex align-items-center">
+                                    <div class="border p-3 border-primary text-primary">Tải ảnh lên</div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="progress-area"></section>
+                        <section class="uploaded-area"></section>
+                    </div>
+                    <div id="snackbar"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn border-primary text-primary">Tải lên</button>
@@ -1507,8 +1526,9 @@
 
     <!--Datetime picker-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-    <script src="vendor/datetimepicker/file.js"></script>
+    <script src="js/datetimepicker/file.js"></script>
     <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="js/Drag-n-Drop-File-Upload-main/js/upload.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/adminLHTN.min.js"></script>
