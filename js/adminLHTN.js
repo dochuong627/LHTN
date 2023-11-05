@@ -53,7 +53,38 @@
     e.preventDefault();
   });
 
-  
+  var globalWindowSelection = null
 
+  $(document).on('click', '#btnHighlight', function(e) {
+    var a = document.createElement("a");
+    a.setAttribute('tabindex', "0");
+    a.setAttribute('data-toggle','popover');
+    a.setAttribute('data-content',$("#inputGopYDaiHoi").val());
+    a.setAttribute('class','text-primary');
+
+    if (globalWindowSelection != null) {
+      globalWindowSelection.surroundContents(a);
+      globalWindowSelection = null;
+    }
+    $('[data-toggle="popover"]').popover();
+    $("#context-menu1").removeClass("show").hide();
+  });
+
+  $('.jumbotron').on('contextmenu', function(e) {
+    var top = e.pageY-300;
+    var left = $('.jumbotron').width() + 50
+    $("#context-menu1").css({
+      display: "block",
+      top: top,
+      left: left,
+      'max-width': '300px',
+      width: '100%'
+    }).addClass("show");
+    if (window.getSelection) {
+      globalWindowSelection = window.getSelection().getRangeAt(0);
+    }
+    return false; //blocks default Webbrowser right click menu
+  })
+  
 
 })(jQuery); // End of use strict
