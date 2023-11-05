@@ -65,3 +65,7 @@
 .nav-pills .nav-link.active{
   display: none;
 }
+
+#leftMenu.nav-pills .nav-link.active{
+  display: block;
+}

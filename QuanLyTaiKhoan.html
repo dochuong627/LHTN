@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LHTN VN - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="js/datetimepicker/file.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <link href="css/adminLHTN.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Logo -->
+        <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-1 my-2 my-md-0 mw-100 logo">
+            <div class="input-group">
+                <div>
+                    <img class="logo-lhtn" src="img/logoLHTN.png" alt="logo"/>
+                </div>
+                <div class="text-uppercase d-flex align-self-center flex-column ml-3 text-white ">
+                    <div class="text20 d-md-none d-xl-block d-sm-none">hệ thống quản lý và điều hành</div>
+                    <div class="text24 d-md-none d-xl-block d-sm-none">HỘI LIÊN HIỆP THANH NIÊN VIỆT NAM</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle p-0" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/imgNgonNgu.png" alt="Ngôn ngữ" />
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languageDropdown">
+                    <h6 class="dropdown-header bg-success">
+                        Ngôn ngữ
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <img src="img/imgNgonNgu.png" alt="Ngôn ngữ" />
+                        </div>
+                        <div>
+                            <span class="font-weight-bold">English</span>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item dropdown no-arrow mx-1">
+
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/vectorThongBao.svg" alt="Thông báo" />
+                    <!-- Counter - Alerts -->
+                    <span class="badge badge-danger badge-counter rounded-circle">3</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="alertsDropdown">
+                    <h6 class="dropdown-header">
+                        Thông báo
+                    </h6>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-file-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 16h00</div>
+                            <span class="font-weight-bold">Một bài viết đã được xuất bản</span>
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                                <i class="fas fa-donate text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 13h00</div>
+                            Bạn vừa đóng hội phí
+                        </div>
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center" href="#">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                                <i class="fas fa-exclamation-triangle text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">01/11/2023 - 11h00</div>
+                            Chú ý 0h00 02/11/2023 hệ thống sẽ bảo trì
+                        </div>
+                    </a>
+                    <a class="dropdown-item text-center small text-gray-500" href="#">Hiển thị tất cả</a>
+                </div>
+            </li>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow d-flex align-items-center">
+                <a class="nav-link dropdown-toggle bg-white h-auto rounded pr-0" href="#" id="userDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="img-profile rounded-circle mr-2 my-2" src="img/imgNguyenVanA.png" alt="Người dùng">
+                    <div class="ml-1 d-flex align-items-start flex-column">
+                        <span class="mr-1 d-none d-lg-inline text-dark small lh-1 font-weight-bold text-lg">Nguyễn Văn A</span>
+                        <span class="mr-0 d-none d-lg-inline text-dark small lh-1">anguyenvan@gmail.com</span>
+                    </div>
+                    <img class="d-md-none d-sm-none d-lg-block mx-2" src="img/vectorExpand.svg" alt="Expand">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                        Đăng xuất
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-white sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#">
+                    <img src="img/icon-BieuDoThongKe.png" alt="Biểu Đồ Thống Kê" />
+                    <span class="collapsing m-0 text-black">Biểu đồ thống kê</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-ChamDiemBoTieuChi.png" alt="Chấm điểm bộ tiêu chí" />
+                    <span class="collapsing m-0">Chấm điểm bộ tiêu chí</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyBoTieuChi.png" alt="Quản lý bộ tiêu chí" />
+                    <span class="collapsing m-0">Quản lý bộ tiêu chí</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyDaiHoi.png" alt="Quản lý đại hội" />
+                    <span class="collapsing m-0">Quản lý đại hội</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyVanBan.png" alt="Quản lý văn bản" />
+                    <span class="collapsing m-0">Quản lý văn bản</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" >
+                    <img src="img/icon-QuanLyBaiViet.png" alt="Quản lý bài viết" />
+                    <span class="collapsing m-0">Quản lý bài viết</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-BaoCao.png" alt="Báo cáo" />
+                    <span class="collapsing m-0">Báo cáo</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyTaiKhoan.png" alt="Quản lý tài khoản" />
+                    <span class="collapsing m-0">Quản lý tài khoản</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-QuanLyPhanQuyen.png" alt="Quản lý phân quyền" />
+                    <span class="collapsing m-0">Quản lý phân quyền</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-LichSuHeThong.png" alt="Lịch sử hệ thống" />
+                    <span class="collapsing m-0">Lịch sử hệ thống</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-TaiLieuHuongDan.png" alt="Tài liệu hướng dẫn" />
+                    <span class="collapsing m-0">Tài liệu hướng dẫn</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="img/icon-CaiDat.png" alt="Cài đặt" />
+                    <span class="collapsing m-0">Cài đặt</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="align-items-start flex-column ml-3 minimal">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <span class="detail">Thu gọn</span>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Breadcrumb -->
+                    <div class="row d-flex w-100">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb text-capitalize">
+                                <li class="breadcrumb-item"><a href="#" class="text-uppercase">Quản lý tài khoản</a></li>
+                                <li class="breadcrumb-item active">Tài khoản</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body m-0 p-0">
+                            <div class="row m-0 text-center text-uppercase font-weight-bold text24 d-flex justify-content-center my-5">Thêm thành viên</div>
+                            <div class="row m-4 border-0">
+                                <div class="w-100"><img src="img/vectorSearch.svg" alt="Search" />Tìm kiếm</div>
+                                <div class="w-100 d-flex" style="flex-flow: wrap">
+                                    <div class="d-flex" style="flex-flow: wrap">
+                                        <div>
+                                            <input class="mr-2 mt-2 px-2" type="text" class="form-control form-control-user" id="HoTen" aria-describedby="HoTen" placeholder="Nhập Họ Tên / CCCD" style="width:200px;height:50px;">
+                                        </div>
+                                        <div>
+                                            <select class="form-select dropdownlist mr-2 mt-2" aria-label="Chọn Tỉnh / Thành" style="width:200px;height:50px;">
+                                                <option selected disabled>Chọn Tỉnh / Thành</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <select class="form-select dropdownlist mr-2 mt-2" aria-label="Chọn Quận / Huyện" style="width:200px;height:50px;">
+                                                <option selected disabled>Chọn Quận / Huyện</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <select class="form-select dropdownlist mr-2 mt-2" aria-label="Chọn Xã / Phường" style="width:200px;height:50px;">
+                                                <option selected disabled>Chọn Xã / Phường</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="btn btn-primary btn-icon-split btn-lg mt-2">
+                                                <span class="text">Lọc</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <a href="#" class="btn btn-warning btn-icon-split btn-lg mt-2"  data-toggle="modal" data-target="#ThemThanhVienModal">
+                                            <span class="text"><i class="fa-solid fa-plus"></i> Thêm thành viên</span>
+                                        </a>
+                                        
+                                        <a href="#" class="btn btn-primary btn-icon-split btn-lg mt-2">
+                                            <span class="text"><img src="img/vectorUpload.svg" alt="upload" /></span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card m-3 border-0">
+                                <div class="card-body row m-0 p-0">
+                                    <div class="col-xs-12 col-lg-2 d-flex align-items-stretch">
+                                        <div class="border rounded w-100">
+                                            <div id="leftMenu" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link active d-flex align-items-center" id="v-pills-TaiKhoan-tab" data-toggle="pill" href="#v-pills-TaiKhoan" role="tab" aria-controls="v-pills-TaiKhoan" aria-selected="true">
+                                                    <img src="img/vectorTaiKhoan.svg" class="mr-2" />Tài Khoản</a>
+                                                <a class="nav-link d-flex align-items-center" id="v-pills-PhanQuyen-tab" data-toggle="pill" href="#v-pills-PhanQuyen" role="tab" aria-controls="v-pills-PhanQuyen" aria-selected="false">
+                                                    <img src="img/vectorPhanQuyen.svg" class="mr-2" />Phân Quyền</a>
+                                                <a class="nav-link d-flex align-items-center" id="v-pills-PhongBan-tab" data-toggle="pill" href="#v-pills-PhongBan" role="tab" aria-controls="v-pills-PhongBan" aria-selected="false">
+                                                    <img src="img/vectorPhongBan.svg" class="mr-2" />Phòng Ban</a>
+                                                <a class="nav-link d-flex align-items-center" id="v-pills-ThongKe-tab" data-toggle="pill" href="#v-pills-ThongKe" role="tab" aria-controls="v-pills-ThongKe" aria-selected="false">
+                                                    <img src="img/vectorThongKe.svg" class="mr-2" />Thống Kê</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-10 d-flex align-items-stretch">
+                                        <div class="border rounded p-3 w-100">
+                                            <div class="tab-content" id="v-pills-tabContent">
+                                                <div class="tab-content" id="v-pills-tabContent">
+                                                    <div class="tab-pane fade show active" id="v-pills-TaiKhoan" role="tabpanel" aria-labelledby="v-pills-TaiKhoan-tab">
+                                                        <table id="DangKyToChucDaiHoi" class="table table-striped table-bordered" style="width:100%">
+                                                            <thead>
+                                                                <tr class="trHeader">
+                                                                    <th>STT</th>
+                                                                    <th>CCCD</th>
+                                                                    <th>Họ và tên</th>
+                                                                    <th>Điện thoại</th>
+                                                                    <th>Email</th>
+                                                                    <th>Đơn vị công tác</th>
+                                                                    <th>Chức vụ</th>
+                                                                    <th>Trạng thái</th>
+                                                                    <th>Hành động</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-success btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item d-flex align-items-center" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="trContent">
+                                                                    <td class="align-middle">1</td>
+                                                                    <td class="align-middle">123456789111</td>
+                                                                    <td class="align-middle">Trần Văn ADCF</td>
+                                                                    <td class="align-middle">0903 141789</td>
+                                                                    <td class="align-middle">tranvanadcf@gmail.com</td>
+                                                                    <td class="align-middle">UBND Phú Yên</td>
+                                                                    <td class="align-middle">Đảng viên</td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-danger btn-icon-split btn-lg mt-2">
+                                                                            <span class="text text12">Chưa hoạt động</span>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="align-middle">
+                                                                        <a href="#" class="btn btn-icon-split btn-lg mt-2 dropdown-toggle dropdown-toggle-split mybtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            <span class="text"><img src="img/vectorMore.svg" /></span>
+                                                                        </a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorNgungHoatDong.svg" alt="Ngung Hoat Dong" />Ngưng hoạt động</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorChinhSua.svg" alt="Chinh sua" />Chỉnh sửa</a>
+                                                                            <a class="dropdown-item" href="#"><img class=" mr-2" src="img/vectorCapLaiMatKhau.svg" alt="Chinh sua" />Cấp lại mật khẩu</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="v-pills-PhanQuyen" role="tabpanel" aria-labelledby="v-pills-PhanQuyen-tab">...</div>
+                                                    <div class="tab-pane fade" id="v-pills-PhongBan" role="tabpanel" aria-labelledby="v-pills-PhongBan-tab">...</div>
+                                                    <div class="tab-pane fade" id="v-pills-ThongKe" role="tabpanel" aria-labelledby="v-pills-ThongKe-tab">...</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer text-white d-flex flex-wrap">
+        <img src="img/logoLHTN.png" alt="Logo LHTN VN" class="my-3 ml-3" />
+        <div class="d-flex align-items-center ml-3">
+            <div class="flex-row">
+                <div class="text-uppercase text-lg font-weight-bold">hệ thống quản lý và điều hành HỘI LIÊN HIỆP THANH NIÊN VIỆT NAM</div>
+                <div class="my-2">
+                    <img src="img/vectorLocation.svg" alt="Vị trí" />
+                    <span>Địa chỉ: 64 Bà Triệu, Hoàn Kiếm, Hà Nội</span>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div class="mr-2">
+                        <img src="img/vectorWebsite.svg" alt="Vị trí" />
+                        <span>Website: www.thanhgiong.vn</span>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/vectorEmail.svg" alt="Vị trí" />
+                        <span>Email: twhoilhtnvn@gmail.com</span>
+                    </div>
+                    <div class="mr-2">
+                        <img src="img/vectorPhone.svg" alt="Vị trí" />
+                        <span>Điện thoại: 0982 869 586</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Có phải bạn muốn đăng xuất?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Chọn nút "Đăng xuất" phía dưới, nếu bạn muốn kết thúc phiên làm việc.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Hủy</button>
+                    <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Thêm thành viên Modal-->
+    <div class="modal fade" id="ThemThanhVienModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-uppercase font-weight-bold" id="exampleModalLabel">Thêm thành viên</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="text-dark">Thông tin cá nhân</div>
+                        <div><a href="#" ><img src="img/imgAnhDaiDien.png" alt="Anh Dai Dien" /></a></div>
+                        <div class="text-primary">Chọn ảnh đại diện</div>
+                    </div>
+                    <div class="font-italic text-danger mt-3">Lưu ý: (*) là các trường nhập bắt buộc</div>
+                    <div class="row w-100">
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Họ và tên <span class="ml-2 text-danger"> (*)</span></div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập họ và tên" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group date d-flex flex-column col-xs-12 col-lg-6 mt-3" id="id_6">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Ngày / Tháng / Năm sinh<span class="ml-2 text-danger"> (*)</span></div>
+                                <div class="input-group-addon input-group-append ml-auto">
+                                    <div class="input-group-text-hdktinh">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập dd/mm/yyyy" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Quê quán <span class="ml-2 text-danger"> (*)</span></div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập thông tin quê quán" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Giới tính <span class="ml-2 text-danger"> (*)</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn giới tính">
+                                    <option selected disabled>Chọn giới tính</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Căn cước công dân <span class="ml-2 text-danger"> (*)</span></div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập CCCD" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group date d-flex flex-column col-xs-12 col-lg-6 mt-3" id="id_7">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Ngày cấp<span class="ml-2 text-danger"> (*)</span></div>
+                                <div class="input-group-addon input-group-append ml-auto">
+                                    <div class="input-group-text-hdktinh">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập dd/mm/yyyy" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Email</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập địa chỉ email" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Điện thoại</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập số điện thoại" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Tỉnh / Thành</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn Tỉnh / Thành">
+                                    <option selected disabled>Chọn Tỉnh / Thành</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Quận / Huyện</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn Quận / Huyện">
+                                    <option selected disabled>Chọn Quận / Huyện</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Phường / Xã</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn Phường / Xã">
+                                    <option selected disabled>Chọn Phường / Xã</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-lg-6 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Địa chỉ</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập số địa chỉ" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-dark font-weight-bold mt-3">Đơn vị công tác / chức vụ / phòng ban</div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Chức vụ</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn Chức vụ">
+                                    <option selected disabled>Chọn Chức vụ</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Trình độ học vấn</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập số thông tin học vấn" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Trình độ chuyên môn</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập số thông tin chuyên môn" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Trình độ chính trị</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập trình độ chính trị" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Vai trò</span></div>
+                            </div>
+                            <div>
+                                <select class="form-select w-100 dropdownlist" aria-label="Chọn vai trò">
+                                    <option selected disabled>Chọn vai trò</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Đơn vị công tác</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập nơi công tác" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3" id="id_8">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Ngày vào Đoàn</span></div>
+                                <div class="input-group-addon input-group-append ml-auto">
+                                    <div class="input-group-text-hdktinh">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input placeholder="Chọn ngày" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3" id="id_9">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Ngày vào Đảng</span></div>
+                                <div class="input-group-addon input-group-append ml-auto">
+                                    <div class="input-group-text-hdktinh">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input placeholder="Chọn ngày" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Phòng ban</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập phòng ban" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-dark font-weight-bold mt-3">Quá trình công tác</div>
+                    </div>
+                    <div class="row w-100 mb-3">
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3" id="id_10">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Thời gian công tác</span></div>
+                                <div class="input-group-addon input-group-append ml-auto">
+                                    <div class="input-group-text-hdktinh">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input placeholder="Chọn ngày" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Chức vụ công tác</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập chức vụ công tác" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                        <div class="input-group d-flex flex-column col-xs-12 col-md-6 col-lg-4 mt-3">
+                            <div class="d-flex">
+                                <div class="text-primary d-flex align-items-center">Nơi công tác</div>
+                            </div>
+                            <div>
+                                <input placeholder="Nhập nơi đã công tác" type="text" value="" class="form-control" required="true">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-primary text-primary" type="button" data-dismiss="modal">Đồng ý</button>
+                    <a class="btn border-danger text-danger" href="login.html">Đóng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!--Datetime picker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="js/datetimepicker/file.js"></script>
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/adminLHTN.min.js"></script>
+    <script src="js/datatable/datatable.js"></script>
+    <script src="js/datetimepicker/index.js"></script>
+
+    
+</body>
+
+</html>

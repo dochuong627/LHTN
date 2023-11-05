@@ -49,4 +49,32 @@
         "showTodayButton": true,
         "format": "DD/MM/YYYY",
     });
+    $('#id_7').datetimepicker({
+        "allowInputToggle": true,
+        "showClose": true,
+        "showClear": true,
+        "showTodayButton": true,
+        "format": "DD/MM/YYYY",
+    });
+    $('#id_8').datetimepicker({
+        "allowInputToggle": true,
+        "showClose": true,
+        "showClear": true,
+        "showTodayButton": true,
+        "format": "DD/MM/YYYY",
+    });
+    $('#id_9').datetimepicker({
+        "allowInputToggle": true,
+        "showClose": true,
+        "showClear": true,
+        "showTodayButton": true,
+        "format": "DD/MM/YYYY",
+    });
+    $('#id_10').datetimepicker({
+        "allowInputToggle": true,
+        "showClose": true,
+        "showClear": true,
+        "showTodayButton": true,
+        "format": "DD/MM/YYYY",
+    });
 })(jQuery); 

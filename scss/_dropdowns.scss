@@ -33,3 +33,7 @@
   border-radius: 2px;
   margin-right: 2rem; 
 }
+
+.mybtn.dropdown-toggle::after {
+  display: none;
+}
