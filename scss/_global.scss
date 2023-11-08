@@ -74,11 +74,16 @@ a {
   user-select: none;
 }
 
-.gridBtnDSDH > .col > a {
+.gridBtnDSDH > .btn, .gridBtnDSDH > .col > a {
   width: 96px;
   margin-top: 2px;
   margin-bottom: 2px;
 }
+
+.gridBtnDSDH > .col{
+  padding: 0px;
+}
+
 
 .uploadzonebox {
   border: 2px dashed $primary;
