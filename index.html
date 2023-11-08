@@ -13,6 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
 
     <!-- Custom styles for this template-->
     <link href="css/adminLHTN.min.css" rel="stylesheet">
@@ -228,57 +229,53 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
                     <!-- Slider -->
                     <div class="row m-0">
                         <div class="card shadow mb-4 position-relative w-100 m-0 p-3 pt-4">
-                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                                <div class="carousel-inner m-0">
-                                    <div class="carousel-item active">
-                                        <div class="row m-0">
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row m-0">
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row m-0">
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row m-0">
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner2.png" alt="First slide"></div>
-                                            <div class="col-6"><img class="d-block w-100" src="img/imgBanner1.png" alt="First slide"></div>
-                                        </div>
-                                    </div>
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
                                 </div>
-                                
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleFade" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleFade" data-slide-to="2"></li>
-                                    <li data-target="#carouselExampleFade" data-slide-to="3"></li>
-                                </ol>
-                                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                    <img src="img/vectorBtnPrev.svg" alt="Prev" />
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                    <img src="img/vectorBtnNext.svg" alt="Next" />
-                                </a>
-                              </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner1.png" alt="First slide">
+                                </div>
+                                <div class="item">
+                                    <img class="d-block w-100" src="img/imgBanner2.png" alt="First slide">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- End Slider -->
 
                     
-                    <div class="row text-uppercase text20 text-dark mb-4 mx-0">Hệ thống chấm tiêu chí của hội</div>
+                    <div class="text-uppercase text20 text-dark mb-4 mx-0 classCenter">Hệ thống chấm tiêu chí của hội</div>
                     <!-- Content Row -->
                     <div class="row">
 
@@ -522,9 +519,11 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/adminLHTN.min.js"></script>
+    <script src="js/slider/slider.js"></script>
     
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>

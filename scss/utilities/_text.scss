@@ -81,3 +81,11 @@
   font-size: 47.01px;
   font-weight: 700;
 }
+
+
+
+@include media-breakpoint-down(md) {
+  .classCenter{
+    text-align: center !important;
+  }
+}
